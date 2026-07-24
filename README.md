@@ -1,36 +1,42 @@
-# Selam Wedding Planner & Decor
+# **SELAM WEDDING PLANNER & DECOR**
 
-A polished, responsive frontend for Selam Wedding Planner & Decor. The site
-showcases wedding and ceremony styling, celebrations, custom floral design,
-featured projects, the planning process, Instagram, and verified contact
-details.
+Selam Wedding Planner & Decor is an elegant event-design website created as a freelance project for an Ethiopian wedding planner and decorator. It gives the business a refined digital space to present its wedding décor, birthday styling, floral work, venue decoration, catering coordination, and other event services.
 
-## Local preview
+The design brings together warm editorial styling, soft natural colors, strong event photography, and a clear visual identity. Every section was shaped to feel graceful, modern, responsive, and closely connected to the celebrations Selam creates in Addis Ababa.
 
-Node.js 22.13 or newer is required.
+## **Visit the Website**
 
-```bash
-npm install
-npm run dev
-```
+[Explore Selam Wedding Planner & Decor](https://selam-decor.vercel.app/)
 
-Open `http://localhost:5173`.
+## **About the Project**
 
-## Checks
+The website introduces Selam Design, presents the services available for weddings and other special occasions, and showcases completed decorations through an interactive photography gallery.
 
-```bash
-npm run lint
-npm run build
-npm test
-```
+Visitors can explore event décor and custom floral work, view photographs in full size, find the business through an embedded satellite map, and connect directly through Instagram, WhatsApp, Telegram, or phone.
 
-## Project structure
+The project also includes a dedicated gallery page designed to support a growing collection of wedding stages, birthday setups, floral walls, arrangements, and venue transformations.
 
-- `app/page.tsx` contains the responsive page and interactions.
-- `app/globals.css` contains the visual system and desktop/mobile layouts.
-- `public/assets/` contains optimized local images supplied for this project.
-- `scripts/prepare-assets.mjs` can regenerate the optimized WebP files from the
-  original source images on this computer.
+## **Tools Used**
 
-This project is frontend-only. It has no database, authentication, admin area,
-inquiry backend, or deployment configuration beyond the local starter runtime.
+**Next.js** — used to create a fast, smooth, and responsive website.
+
+**React** — used to build the interactive gallery, image filters, mobile navigation, and full-screen image viewer.
+
+**CSS** — used to create the visual identity, editorial layouts, animations, responsive service cards, and mobile experience.
+
+**Google Maps** — used to present the exact business location in satellite view and provide directions.
+
+**Vercel** — used to publish and manage the live production website.
+
+## **Project Focus**
+
+- Wedding and ceremony decoration
+- Birthday and private-event styling
+- Custom floral design
+- Catering and venue coordination
+- Photography galleries
+- Mobile-friendly design
+- Direct customer contact
+- Ethiopian event services
+
+Designed and developed by [Dawit Enku](https://dawit.et/).
