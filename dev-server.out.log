@@ -1,0 +1,15 @@
+
+  vinext dev  (Vite 8.0.13)
+
+[2m13:29:40[22m [36m[1m[vite][22m[39m [34m[2m(rsc)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m13:29:40[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m13:29:41[22m [36m[1m[vite][22m[39m [34m[2m(rsc)[22m[39m [optimizer] bundling dependencies...
+[2m13:29:41[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [optimizer] bundling dependencies...
+[2m13:29:46[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://localhost:[1m5173[22m[2m/__debug[39m[22m
+ GET / 200 in 1.4s (compile: 1784888978.7s, render: 1.4s)
+ GET /?_rsc 200 in 46ms (compile: 1784888978.7s, render: 0ms)
+ GET / 200 in 138ms (compile: 1784888978.7s, render: 103ms)
+ GET / 200 in 78ms (compile: 1784888978.7s, render: 52ms)
+ GET /?_rsc 200 in 78ms (compile: 1784888978.7s, render: 0ms)
