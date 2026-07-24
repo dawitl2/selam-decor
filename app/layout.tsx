@@ -1,7 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Selam Wedding Planner & Decor | Addis Ababa",
   description:
     "Wedding planning, event decoration and custom floral design for weddings, engagements, birthdays, ceremonies and private celebrations.",

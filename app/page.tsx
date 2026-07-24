@@ -14,7 +14,7 @@ const telegramUrl = "https://t.me/selamdecoranddesign";
 const whatsappUrl = "https://wa.me/251913400839";
 const phoneUrl = "tel:+251913400839";
 const mapUrl =
-  "https://www.google.com/maps/search/?api=1&query=Bole+Atlas%2C+Addis+Ababa%2C+Ethiopia";
+  "https://www.google.com/maps/place/9%C2%B000%2737.2%22N+38%C2%B047%2745.7%22E/@9.0103212,38.7959469,70m/data=!3m1!1e3!4m4!3m3!8m2!3d9.0103199!4d38.7960384!5m1!1e1?entry=ttu";
 
 const gallery = [
   {
@@ -76,31 +76,45 @@ const gallery = [
 const services = [
   {
     number: "01",
-    title: "Wedding & Ceremony Styling",
-    text: "Stage focal points, ceremonial backdrops, entrances and reception details composed as one graceful setting.",
+    title: "Wedding Décor",
+    text: "Ceremony stages, reception backdrops, entrances and tables styled as one complete celebration.",
     image: "/assets/wedding-stage-grand.webp",
     alt: "Grand wedding ceremony stage",
   },
   {
     number: "02",
-    title: "Engagements & Celebrations",
-    text: "Romantic settings for engagements, birthdays, bridal moments and private celebrations—tailored to the occasion.",
+    title: "Birthday Décor",
+    text: "Colorful, personal settings for birthdays, engagements, showers and private celebrations.",
     image: "/assets/wedding-stage-olive.webp",
     alt: "Olive and ivory celebration backdrop",
   },
   {
     number: "03",
-    title: "Custom Floral Design",
-    text: "Hand-shaped arrangements, statement flower walls and floral features made in your chosen palette and style.",
+    title: "Catering Coordination",
+    text: "A polished food-service setup coordinated with your event palette, guest flow and table styling.",
+    image: "/assets/wedding-stage-white-gold.webp",
+    alt: "Elegant white and gold event setting",
+  },
+  {
+    number: "04",
+    title: "Venue Styling",
+    text: "Layout, focal points and finishing details that transform your chosen venue from entrance to stage.",
+    image: "/assets/hero-stage.webp",
+    alt: "Fully styled ivory reception venue",
+  },
+  {
+    number: "05",
+    title: "Custom Florals",
+    text: "Hand-shaped arrangements, flower walls and floral features created in your chosen colors.",
     image: "/assets/floral-wall-pink.webp",
     alt: "Pink and ivory custom flower wall",
   },
   {
-    number: "04",
-    title: "Flower Walls & Floral Features",
-    text: "Handmade flower walls, illuminated floral frames and statement features prepared in coordinated colors and forms.",
+    number: "06",
+    title: "Guest Accommodation",
+    text: "Support coordinating nearby accommodation for couples, families and guests arriving for the occasion.",
     image: "/assets/floral-frame-green.webp",
-    alt: "Green and ivory custom floral display setup",
+    alt: "Green and ivory welcome display",
   },
 ];
 
@@ -340,47 +354,46 @@ export default function Home() {
 
         <div className="craft-grid section-shell">
           <article className="craft-card craft-card-decor reveal" data-reveal>
-            <div className="craft-art decor-art" aria-hidden="true">
-              <div className="decor-arch decor-arch-left" />
-              <div className="decor-arch decor-arch-center" />
-              <div className="decor-arch decor-arch-right" />
-              <div className="decor-drape decor-drape-one" />
-              <div className="decor-drape decor-drape-two" />
-              <div className="decor-table" />
-              <div className="decor-bloom decor-bloom-left" />
-              <div className="decor-bloom decor-bloom-right" />
+            <div className="craft-photo">
+              <Image
+                src="/assets/wedding-stage-grand.webp"
+                alt="Grand gold and floral wedding stage"
+                fill
+                sizes="(max-width: 760px) 50vw, 46vw"
+              />
             </div>
             <div className="craft-card-copy">
               <span>01 · The setting</span>
               <h3>Event Decoration</h3>
               <p>
-                Stages, backdrops, entrances, tables and focal moments composed
-                into one complete celebration.
+                Weddings, birthdays, engagements and private events, styled from
+                entrance to focal stage.
               </p>
+              <a href="#services">
+                Explore events <i aria-hidden="true">→</i>
+              </a>
             </div>
           </article>
 
           <article className="craft-card craft-card-floral reveal" data-reveal>
-            <div className="craft-art flower-art" aria-hidden="true">
-              <div className="flower-stem flower-stem-one" />
-              <div className="flower-stem flower-stem-two" />
-              <div className="flower-stem flower-stem-three" />
-              <span className="graphic-bloom graphic-bloom-one" />
-              <span className="graphic-bloom graphic-bloom-two" />
-              <span className="graphic-bloom graphic-bloom-three" />
-              <span className="graphic-bloom graphic-bloom-four" />
-              <span className="graphic-leaf graphic-leaf-one" />
-              <span className="graphic-leaf graphic-leaf-two" />
-              <span className="graphic-leaf graphic-leaf-three" />
-              <div className="graphic-vase" />
+            <div className="craft-photo">
+              <Image
+                src="/assets/floral-wall-pink.webp"
+                alt="Handmade pink and ivory floral wall"
+                fill
+                sizes="(max-width: 760px) 50vw, 46vw"
+              />
             </div>
             <div className="craft-card-copy">
               <span>02 · The signature</span>
               <h3>Custom Flower Design</h3>
               <p>
                 Handmade arrangements, flower walls and floral features shaped
-                in the colors and style chosen for the occasion.
+                for your palette and occasion.
               </p>
+              <a href="#florals">
+                Explore florals <i aria-hidden="true">→</i>
+              </a>
             </div>
           </article>
         </div>
@@ -459,6 +472,14 @@ export default function Home() {
               <div className="service-content">
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Ask Selam about ${service.title}`}
+                >
+                  Ask about this <span aria-hidden="true">→</span>
+                </a>
               </div>
             </article>
           ))}
@@ -531,14 +552,14 @@ export default function Home() {
               <em> Addis Ababa.</em>
             </h2>
             <p>
-              Selam Wedding Planner & Decor is publicly listed in the Bole Atlas
-              area. Open the map for directions or contact the team before your
-              visit.
+              Selam Wedding Planner & Decor is pinned at the location below.
+              Open the satellite map for a closer view and turn-by-turn
+              directions.
             </p>
             <div className="location-details">
               <span>Location</span>
               <strong>Bole Atlas, Addis Ababa</strong>
-              <small>Please confirm the exact building before visiting.</small>
+              <small>9.0103199, 38.7960384</small>
             </div>
             <a
               className="button"
@@ -553,17 +574,17 @@ export default function Home() {
           <div className="map-frame reveal" data-reveal>
             <iframe
               title="Map showing Bole Atlas, Addis Ababa"
-              src="https://www.google.com/maps?q=Bole+Atlas,+Addis+Ababa,+Ethiopia&output=embed"
+              src="https://maps.google.com/maps?q=9.0103199,38.7960384&t=k&z=18&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="map-caption">
-              <span className="map-pin" aria-hidden="true">
-                ●
+              <span className="google-mark" aria-hidden="true">
+                G
               </span>
               <div>
+                <small>Google Maps</small>
                 <strong>Selam Wedding Planner & Decor</strong>
-                <small>Bole Atlas · Addis Ababa</small>
               </div>
             </div>
           </div>
@@ -619,6 +640,11 @@ export default function Home() {
               </span>
             </button>
           ))}
+        </div>
+        <div className="gallery-more section-shell">
+          <a className="button button-outline" href="/gallery">
+            View the full gallery <span aria-hidden="true">→</span>
+          </a>
         </div>
       </section>
 
@@ -734,43 +760,68 @@ export default function Home() {
 
       <footer>
         <div className="footer-main section-shell">
-          <a className="footer-brand" href="#home">
-            <Image
-              src="/assets/selam-logo.webp"
-              alt="Selam Wedding Planner & Decor"
-              width={170}
-              height={170}
-            />
-          </a>
-          <p>
-            Elegant wedding planning, event decoration and custom floral design
-            for meaningful celebrations.
-          </p>
-          <nav aria-label="Footer navigation">
-            <a href="#services">Services</a>
-            <a href="#florals">Custom florals</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#about">About</a>
-          </nav>
-          <div className="footer-contact">
-            <a href={phoneUrl}>+251 913 400 839</a>
-            <span>Bole Atlas, Addis Ababa</span>
-            <a href={instagramUrl} target="_blank" rel="noreferrer">
-              Instagram ↗
+          <div className="footer-identity">
+            <a className="footer-brand" href="#home">
+              <Image
+                src="/assets/selam-logo.webp"
+                alt="Selam Wedding Planner & Decor"
+                width={170}
+                height={170}
+              />
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer">
-              WhatsApp ↗
-            </a>
-            <a href={telegramUrl} target="_blank" rel="noreferrer">
-              Telegram ↗
-            </a>
+            <p>
+              Wedding planning, event decoration and custom floral design for
+              celebrations across Addis Ababa.
+            </p>
+          </div>
+          <div className="footer-columns">
+            <nav className="footer-column" aria-label="Footer navigation">
+              <span>Explore</span>
+              <a href="#services">Services</a>
+              <a href="#florals">Custom florals</a>
+              <a href="/gallery">Full gallery</a>
+              <a href="#about">About Selam</a>
+            </nav>
+            <div className="footer-column footer-contact">
+              <span>Contact</span>
+              <a href={phoneUrl}>+251 913 400 839</a>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                WhatsApp ↗
+              </a>
+              <a href={telegramUrl} target="_blank" rel="noreferrer">
+                Telegram ↗
+              </a>
+              <a href={instagramUrl} target="_blank" rel="noreferrer">
+                Instagram ↗
+              </a>
+            </div>
+            <div className="footer-column">
+              <span>Visit</span>
+              <p>
+                Bole Atlas
+                <br />
+                Addis Ababa, Ethiopia
+              </p>
+              <a href={mapUrl} target="_blank" rel="noreferrer">
+                Open map ↗
+              </a>
+            </div>
           </div>
         </div>
         <div className="footer-bottom section-shell">
           <span>
             © {new Date().getFullYear()} Selam Wedding Planner & Decor
           </span>
-          <span>Beautiful moments, thoughtfully made.</span>
+          <span className="developer-credit">
+            Designed & developed by{" "}
+            <a href="https://dawit.et" target="_blank" rel="noreferrer">
+              Dawit Enku
+            </a>
+            <i aria-hidden="true">·</i>
+            <a href="https://github.com/dawitl2" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </span>
         </div>
       </footer>
 
